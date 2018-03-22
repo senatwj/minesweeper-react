@@ -1,0 +1,31 @@
+.tile {
+    height: 25px;
+    width: 25px;
+    background-color: darkblue;
+    border: 1px solid white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag {
+    color: yellow;
+}
+
+.open {
+    background-color: lightblue;
+}
+
+.bomb {
+    color: red;
+}
+
+.open.bomb {
+    background-color: maroon !important;
+}
+
+.incorrectlyFlaggedBomb {
+    background-color: lightblue !important;
+    color: red;
+}

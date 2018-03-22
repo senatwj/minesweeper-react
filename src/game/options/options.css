@@ -1,0 +1,15 @@
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.difficulties label {
+    text-transform: capitalize;
+}
+
+.newGame {
+    margin: 15px 0 10px 0;
+}
