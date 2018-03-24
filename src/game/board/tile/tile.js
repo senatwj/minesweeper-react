@@ -10,6 +10,7 @@ class Tile extends Component {
 
         this.handleClick = this.handleClick.bind(this);
         this.handleRightClick = this.handleRightClick.bind(this);
+        this.handleDoubleClick = this.handleDoubleClick.bind(this);
     }
 
     handleClick() {
@@ -22,6 +23,12 @@ class Tile extends Component {
         e.preventDefault();
         if (!this.props.game.isGameOver && !this.props.tile.isOpen) {
             this.props.flagTile(this.props.tile.row, this.props.tile.column);
+        }
+    }
+
+    handleDoubleClick() {
+        if (!this.props.game.isGameOver && this.props.tile.isOpen && this.props.tile.adjacentBombs > 0 && this.props.tile.adjacentBombs === this.props.tile.adjacentFlaggedTiles) {
+            this.props.chord(this.props.tile);
         }
     }
 
@@ -71,7 +78,8 @@ class Tile extends Component {
         return (
             <div className={"tile" + openClass + flaggedClass + bombClass + isIncorrectlyFlaggedBombClass}
                  onClick={this.handleClick}
-                 onContextMenu={this.handleRightClick}>
+                 onContextMenu={this.handleRightClick}
+                 onDoubleClick={this.handleDoubleClick}>
                 {flag}
                 {bomb}
                 {times}

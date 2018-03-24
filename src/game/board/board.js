@@ -13,6 +13,7 @@ class Board extends Component {
 
         this.flagTile = this.flagTile.bind(this);
         this.clickTile = this.clickTile.bind(this);
+        this.chord = this.chord.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -36,6 +37,7 @@ class Board extends Component {
                     isFlagged: false,
                     isOpen: false,
                     adjacentBombs: 0,
+                    adjacentFlaggedTiles: 0,
                     isOpenedBomb: false,
                     isIncorrectlyFlaggedBomb: false
                 }
@@ -70,7 +72,7 @@ class Board extends Component {
         })
         this.startGame();
         if (tile.adjacentBombs === 0) {
-            this.chord(board, tile);
+            this.chord(tile);
         }
     }
 
@@ -82,14 +84,15 @@ class Board extends Component {
         if (tile.isBomb) {
             this.endGame();
         } else if (tile.adjacentBombs === 0) {
-            this.chord(board, tile);
+            this.chord(tile);
         }
         this.setState({
             board
         });
     }
 
-    chord(board, tile) {
+    chord(tile) {
+        const board = [...this.state.board];
         const neighbors = this.findNeighbors(board, tile);
         const len = neighbors.length;
         for (let i = 0; i < len; i++) {
@@ -104,8 +107,12 @@ class Board extends Component {
         if (!this.props.game.hasMadeFirstMove) {
             this.startGame();
         }
-        this.setState((prevState) => {
-            return {board: update(prevState.board, {[row]: {[column]: {isFlagged: {$apply: isFlagged => !isFlagged}}}})}
+        let board = [...this.state.board];
+        const tile = board[row][column];
+        tile.isFlagged = !tile.isFlagged;
+        this.incrementNeighborPropertiesByCount(board, tile, 'adjacentFlaggedTiles', tile.isFlagged ? 1 : -1);
+        this.setState({
+            board
         });
     }
 
@@ -116,7 +123,7 @@ class Board extends Component {
             const tile = board[this.generateRandomNumber(this.props.game.num_rows)][this.generateRandomNumber(this.props.game.num_columns)];
             if (!tile.isOpen && !tile.isBomb) {
                 tile.isBomb = true;
-                this.updateNeighborsBombCounts(board, tile);
+                this.incrementNeighborPropertiesByCount(board, tile, 'adjacentBombs', 1);
                 bombsToPlace--;
             }
         }
@@ -125,12 +132,12 @@ class Board extends Component {
         });
     }
 
-    updateNeighborsBombCounts(board, tile) {
+    incrementNeighborPropertiesByCount(board, tile, prop, count) {
         const neighbors = this.findNeighbors(board, tile);
         const len = neighbors.length;
         for (let i = 0; i < len; i++) {
             const neighbor = neighbors[i];
-            neighbor.adjacentBombs++;
+            neighbor[prop] = neighbor[prop] + count;
         }
     }
 
@@ -192,7 +199,7 @@ class Board extends Component {
                 {this.state.board.map((row, index) => {
                     return <div key={index} className="row">
                         {row.map((tile) => {
-                            return <Tile key={tile.column} tile={tile} game={this.props.game} flagTile={this.flagTile} clickTile={this.clickTile}></Tile>
+                            return <Tile key={tile.column} tile={tile} game={this.props.game} flagTile={this.flagTile} clickTile={this.clickTile} chord={this.chord}></Tile>
                         })}
                     </div>
                 })}

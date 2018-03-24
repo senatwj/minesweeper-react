@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc5b708-dc49-438b-916d-e463a1ab827b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/game/board/board.js" afterPath="$PROJECT_DIR$/src/game/board/board.js" />
-      <change beforePath="$PROJECT_DIR$/src/game/game.js" afterPath="$PROJECT_DIR$/src/game/game.js" />
+      <change beforePath="$PROJECT_DIR$/src/game/board/tile/tile.js" afterPath="$PROJECT_DIR$/src/game/board/tile/tile.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,14 +17,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="board.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="board.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game/board/board.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="67" column="19" lean-forward="false" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+            <state relative-caret-position="2074">
+              <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
               <folding>
-                <marker date="1521931783562" expanded="true" signature="5527:5937" ph="..." />
-                <marker date="1521931783562" expanded="true" signature="5644:5898" ph="..." />
+                <marker date="1521935060128" expanded="true" signature="5825:6254" ph="..." />
+                <marker date="1521935060128" expanded="true" signature="5942:6215" ph="..." />
               </folding>
             </state>
           </provider>
@@ -34,8 +33,8 @@
       <file leaf-file-name="tile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/board/tile/tile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1191">
-              <caret line="77" column="35" lean-forward="false" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+            <state relative-caret-position="493">
+              <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -43,24 +42,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="109" column="33" lean-forward="false" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+            <state relative-caret-position="493">
+              <caret line="103" column="54" lean-forward="true" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/board/board.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -89,16 +78,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="options.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/options/options.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -113,6 +92,7 @@
       <find>setst</find>
       <find>incrementga</find>
       <find>endga</find>
+      <find>updateNeighborsBombCounts</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,12 +109,12 @@
         <option value="$PROJECT_DIR$/src/game/stats/stats.css" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/game/board/tile/tile.css" />
-        <option value="$PROJECT_DIR$/src/game/board/tile/tile.js" />
         <option value="$PROJECT_DIR$/src/game/options/options.css" />
         <option value="$PROJECT_DIR$/src/game/options/options.js" />
         <option value="$PROJECT_DIR$/src/game/stats/stats.js" />
-        <option value="$PROJECT_DIR$/src/game/board/board.js" />
         <option value="$PROJECT_DIR$/src/game/game.js" />
+        <option value="$PROJECT_DIR$/src/game/board/tile/tile.js" />
+        <option value="$PROJECT_DIR$/src/game/board/board.js" />
       </list>
     </option>
   </component>
@@ -272,12 +252,12 @@
       <workItem from="1520796321465" duration="723000" />
       <workItem from="1520797678593" duration="1785000" />
       <workItem from="1520957734642" duration="62448000" />
-      <workItem from="1521930352260" duration="1878000" />
+      <workItem from="1521930352260" duration="4721000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67679000" />
+    <option name="totallyTimeSpent" value="70522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -319,8 +299,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521931783562" expanded="true" signature="5527:5937" ph="..." />
-            <marker date="1521931783562" expanded="true" signature="5644:5898" ph="..." />
+            <marker date="1521935060128" expanded="true" signature="5825:6254" ph="..." />
+            <marker date="1521935060128" expanded="true" signature="5942:6215" ph="..." />
           </folding>
         </state>
       </provider>
@@ -550,14 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/board/board.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/options/options.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -609,10 +581,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="103" column="54" lean-forward="true" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/board/board.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/board/tile/tile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1191">
-          <caret line="77" column="35" lean-forward="false" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+        <state relative-caret-position="493">
+          <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -621,21 +611,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/board/board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="67" column="19" lean-forward="false" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+        <state relative-caret-position="2074">
+          <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
           <folding>
-            <marker date="1521931783562" expanded="true" signature="5527:5937" ph="..." />
-            <marker date="1521931783562" expanded="true" signature="5644:5898" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="109" column="33" lean-forward="false" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1521935060128" expanded="true" signature="5825:6254" ph="..." />
+            <marker date="1521935060128" expanded="true" signature="5942:6215" ph="..." />
           </folding>
         </state>
       </provider>
