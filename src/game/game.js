@@ -67,6 +67,12 @@ class Game extends Component {
         }
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (!this.state.game.isGameOver && this.state.game.hasMadeFirstMove) {
+            this.checkForWin();
+        }
+    }
+
     tick() {
         this.setState((prevState) => {
             return {time: update(prevState.time, {seconds: {$set: Math.floor((new Date() - prevState.time.current) / 1000)}})}
@@ -98,6 +104,12 @@ class Game extends Component {
             return {game: this.getNewGame(difficulty),
                     time: update(prevState.time, {timer: {$set: clearInterval(prevState.time.timer)}, seconds: {$set: 0}})}
         });
+    }
+
+    checkForWin() {
+        if (this.state.game.tilesOpened === this.state.game.openTilesToWin) {
+            this.endGame(true);
+        }
     }
 
     render() {

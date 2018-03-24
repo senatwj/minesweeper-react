@@ -22,15 +22,6 @@ class Board extends Component {
                 board: this.getNewBoard(nextProps.game.num_rows, nextProps.game.num_columns)
             });
         }
-        if (!nextProps.game.isGameOver && nextProps.game.hasMadeFirstMove) {
-            this.checkForWin(nextProps.game.tilesOpened, nextProps.game.openTilesToWin);
-        }
-    }
-
-    checkForWin(tilesOpened, tilesToWin) {
-        if (tilesOpened === tilesToWin) {
-            this.props.endGame(true);
-        }
     }
 
     getNewBoard(rows, columns) {
